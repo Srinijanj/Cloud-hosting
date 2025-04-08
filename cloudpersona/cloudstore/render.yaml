@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: cloudstore
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn cloudstore.wsgi:application
+    plan: free
